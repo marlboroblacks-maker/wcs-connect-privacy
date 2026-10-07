@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WCS Connect Privacy Policy</title>
+  <meta name="description" content="Privacy policy for the WCS Connect Mac, iPhone, and iPad app by WCS Engineering LLC.">
+  <style>
+    :root { color-scheme: dark; font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #101318; color: #f2f4f7; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main { width: min(820px, calc(100% - 32px)); margin: 48px auto; padding: clamp(26px, 6vw, 60px); background: #1a2028; border: 1px solid #38414d; border-radius: 20px; }
+    h1 { margin: 0 0 4px; font-size: clamp(2rem, 6vw, 3rem); line-height: 1.15; }
+    h2 { margin: 2rem 0 .5rem; font-size: 1.25rem; }
+    .eyebrow { margin: 0 0 10px; color: #b6bdc9; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+    .updated, footer { color: #b6bdc9; }
+    a { color: #a9d1ff; }
+    footer { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid #38414d; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">WCS Engineering LLC</p>
+    <h1>WCS Connect Privacy Policy</h1>
+    <p class="updated">Last updated: October 7, 2026</p>
+    <p>WCS Connect configures and monitors Raspberry Pi Pico devices from a Mac, and lets a paired iPhone or iPad view selected signals and send permitted output commands. This policy explains how its local and optional Cloudflare connections handle information.</p>
+
+    <h2>Information you enter and see</h2>
+    <p>The app stores device names, signal names and function tags, GPIO maps, interface labels, preferences, production counts, and machine-state history on the Mac. The iPhone or iPad stores connection profiles and display preferences. Pairing and control keys are stored in Keychain; eligible profiles and display preferences may sync through your Apple ID and iCloud Keychain. Wi-Fi credentials entered during programming are written to the selected Pico over USB. The app does not send the Wi-Fi password to the Cloudflare relay.</p>
+
+    <h2>Local network mode</h2>
+    <p>When local monitor sharing is enabled, a paired phone requests device status and history directly from the Mac over the local network or a VPN. If output control is separately enabled and the Mac operator arms a board, the phone can send authenticated output commands. These local app protocols do not encrypt status or commands at the application layer; use trusted Wi-Fi and a private VPN for remote access. Do not expose the app's local ports to the public internet.</p>
+
+    <h2>Optional standalone Cloudflare mode</h2>
+    <p>For a Pico W/WH or Pico 2 W programmed for standalone mode, the Pico sends its board identifier, device and signal labels, mapped GPIO values, machine-state changes, and production counts to a WCS Connect Cloudflare Worker over HTTPS. The Worker stores the latest report and event history so a paired phone and Mac can show current and past readings. It also holds pending output commands and signal-behavior settings. The relay uses separate read, control, and device-write keys. Cloudflare processes this information and technical connection data as the hosting provider. Do not put personal or confidential information in device or signal names.</p>
+
+    <h2>Use, retention, and deletion</h2>
+    <p>WCS Engineering uses this information to provide the app's monitoring, history, and control features. WCS Connect has no advertising or tracking SDK and does not sell this information. Local app data stays on the device until you delete the app's data; removing the Mac app alone may leave its workspace file in Application Support. Device backups and iCloud Keychain copies follow your Apple settings. Cloud reports and event history do not currently expire automatically, and removing a board from the app does not erase its stored relay history. To request a copy or deletion of cloud board data, email <a href="mailto:Support@wcscnc.com?subject=WCS%20Connect%20Privacy">Support@wcscnc.com</a> with the board identifier; do not send pairing keys or Wi-Fi passwords. WCS Engineering will verify that the request is authorized before deleting cloud data.</p>
+
+    <h2>Changes and contact</h2>
+    <p>If the app's data practices change, this policy will be updated with a new revision date. For privacy questions or deletion requests, contact <a href="mailto:Support@wcscnc.com">Support@wcscnc.com</a>. For setup help, see <a href="support.html">WCS Connect Support</a>.</p>
+
+    <footer><p>This page is hosted on GitHub Pages. GitHub may process technical information when serving the webpage under its own privacy statement.</p></footer>
+  </main>
+</body>
+</html>

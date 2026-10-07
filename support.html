@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WCS Connect Support</title>
+  <meta name="description" content="Support information for WCS Connect by WCS Engineering LLC.">
+  <style>
+    :root { color-scheme: dark; font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #101318; color: #f2f4f7; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main { width: min(820px, calc(100% - 32px)); margin: 48px auto; padding: clamp(26px, 6vw, 60px); background: #1a2028; border: 1px solid #38414d; border-radius: 20px; }
+    h1 { margin: 0 0 4px; font-size: clamp(2rem, 6vw, 3rem); line-height: 1.15; }
+    h2 { margin: 2rem 0 .5rem; font-size: 1.25rem; }
+    .eyebrow { margin: 0 0 10px; color: #b6bdc9; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+    a { color: #a9d1ff; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">WCS Engineering LLC</p>
+    <h1>WCS Connect Support</h1>
+    <p>WCS Connect is a Mac setup app and an iPhone/iPad monitor for mapped Raspberry Pi Pico signals. The Mac is needed to program a board. A Pico W/WH or Pico 2 W can report through the optional Cloudflare relay after setup.</p>
+
+    <h2>Getting started</h2>
+    <p>On the Mac, add the exact Pico model, check its GPIO map, install MicroPython if needed, and program the WCS firmware with field wiring disconnected. Follow the in-app Setup guide and confirm the board's reported map before testing a 3.3 V input or a small LED output. Keep 5 V and 24 V away from Pico GPIO. WCS Connect is not a safety controller or emergency-stop circuit.</p>
+
+    <h2>Connection help</h2>
+    <p>For local monitoring, keep the Mac app running and the phone on the same trusted network, allow Local Network access, and wait for iCloud Keychain to sync the monitor key or enter it under Manual connection. Output control also requires a separate key, Mac sharing permission, per-device permission, and local arming. For a standalone Pico, check its 2.4 GHz Wi-Fi, Worker URL, power, and latest report age.</p>
+
+    <h2>Contact</h2>
+    <p>Email <a href="mailto:Support@wcscnc.com?subject=WCS%20Connect%20Support">Support@wcscnc.com</a> with the app version, Mac or iPhone/iPad model, Pico model, the step that failed, and any error text. Do not email Wi-Fi passwords, pairing keys, relay secrets, or production data unless you specifically choose to share it through a trusted channel.</p>
+    <p><a href="index.html">Privacy Policy</a></p>
+  </main>
+</body>
+</html>
